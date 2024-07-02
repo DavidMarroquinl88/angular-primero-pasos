@@ -1,0 +1,18 @@
+<h3>Listado de Héroes</h3>
+
+<div *ngIf="nameDelete; else showMessageNotDelete">
+  <h2>Nombre eliminado {{nameDelete}}</h2>
+</div>
+
+<ng-template #showMessageNotDelete>
+  <h2>No se pueden eliminar mas nombres</h2>
+</ng-template>
+
+
+<ol>
+  <li *ngFor="let item of names">{{item}}</li>
+</ol>
+
+
+
+<button class="btn btn-primary" (click)="revemoLastName()">Eliminar último nombre</button>

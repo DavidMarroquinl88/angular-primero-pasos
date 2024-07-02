@@ -1,0 +1,24 @@
+
+<h4>Lista DBZ</h4>
+<ul class="list-group">
+  <li
+
+
+  *ngFor="let item of charactersList;
+    let i = index;
+    let isFirst = first;
+    let isLast = last;
+    let isEven = even;
+    let isOdd = odd;
+    "
+  class="list-group-item d-flex justify-content-between align-items-center"
+  [ngClass]="{
+    'list-group-item-dark' : isOdd,
+    'list-group-item-primary' : isEven
+  }"
+
+  >
+  <div>{{item.id}}.-{{item.name}} - Power {{item.power}}</div>
+  <button (click)="deleteCharacter(item.id!)"  class="btn btn-danger">x</button>
+</li>
+</ul>

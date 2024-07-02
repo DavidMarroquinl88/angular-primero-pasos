@@ -1,0 +1,22 @@
+<dl class="mt-5">
+
+  <dt>Nombre</dt>
+  <dd>{{firstName}}</dd>
+
+  <dt>Apellidos</dt>
+  <dd>{{lastName}}</dd>
+
+  <dt>Edad</dt>
+  <dd>{{getAge}}</dd>
+
+  <dt>Nombre Completo</dt>
+  <dd>{{getName()}}</dd>
+</dl>
+
+<button
+  *ngIf="firstName === 'David'"
+  class="btn btn-primary mx-2"
+  (click)="changeFirstName()">
+  Cambiar Nombre
+</button>
+<button *ngIf="lastName === 'Marroquín López'" class="btn btn-primary" (click)="changeLastName()"> Cambiar Apellidos</button>
